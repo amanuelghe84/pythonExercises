@@ -33,25 +33,35 @@ fruits.append("orange")
 
 print(fruits)
 
-fruits.remove("banana")
+fruits.pop(1)
+
+# pop by using an index
 
 print(fruits)
 
-print(fruits[0],fruits[2])
+# fruits.remove("banana")
+
+first_elem, last_elem = "apple", "cherry"
+
+print(first_elem, last_elem)
+
+print(fruits)
 
 
 # 3. Define a set of numbers containing 1, 2, 3, 4, and 5.
 #    a) Add the number 6 to the set.
 #    b) Remove the number 3 from the set.
 #    c) Check if the numbers 5 and 7 are in the set, and print the results.
-
+#cccccc
 numbers_set = {1, 2, 3, 4, 5}
 
-numbers_set.add(6)
+numbers_set = list(numbers_set)
 
-print(numbers_set)
+numbers_set.append(6)
 
 numbers_set.remove(3)
+
+numbers_set = set(numbers_set)
 
 print(numbers_set)
 
@@ -78,14 +88,33 @@ print(y_coordinates)
 #    c) Print Bob's grade.
 
 grades = {"Alice": 85, "Bob": 90, "Charlie": 78}
-
-grades.append({"David": 88})
+# a)
+grades["David"] = 88
 
 print(grades)
+# b)
+grades["Alice"] = 95
+
+print(grades)
+# c)
+bob_grade = 90
+
+print(bob_grade)
+
+# for value in values:
+#     print(value)
 
 
 
- 
+# for key, value in zip(keys, values):
+
+# for key, value in grades.items():
+
+#     print(f"{key}: {value}")
+
+
+    
+
 
 # 6. Define a variable called `age` with a value of 18.
 #    a) Write an if/else statement that checks if the age is 18 or above. 
@@ -93,15 +122,35 @@ print(grades)
 
 age = 18
 
+if age >= 18:
+
+    print(f" you are eligible to vote")
+
+else:
+
+    print(f"you are not eligible to vote")
+
+
+
 # 7. Define a list of fruits: ["apple", "orange", "grape"].
 #    a) Use a `for` loop to print each fruit in the list.
 
 fruits = ["apple", "orange", "grape"]
 
+for fruit in fruits:
+
+    print(fruit)
+
+    
+
 # 8. Define a variable `count` with a value of 5.
 #    a) Use a `while` loop to print a countdown from 5 to 1.
 
 count = 5
+
+while count > 0:
+    print(count)
+    count-=1
 
 # 9. Challenge: Combine lists, sets, dictionaries, and loops.
 #    a) Define a list of numbers from 1 to 10.
@@ -110,6 +159,17 @@ count = 5
 #    d) Print the set of even numbers and the dictionary.
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(numbers)
+
+even_numbers = {2, 4, 6, 8, 10}
+
+print(even_numbers)
+
+my_dict = (2**2, 4**2, 6**2, 8**2, 10**2)
+
+print(my_dict)
+
 
 
 # 10. Conversion between List, Set, and Tuple
@@ -122,6 +182,26 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # even_numbers (from challenge) -> tuple
 # coordinates (tuple) -> list
 
+fruits = ["apple", "orange", "grape"]
+
+fruits = set(fruits)
+
+print(fruits)
+
+even_numbers = {2, 4, 6, 8, 10}
+
+even_numbers = tuple(even_numbers)
+
+print(even_numbers)
+
+coordinates = (10.5, 20.7)
+
+coordinates = list(coordinates)
+
+print(coordinates)
+
+
+
 # 11. Dictionary Keys and Values
 #     a) Print the list of dictionary keys from the `grades` dictionary.
 #     b) Print the list of dictionary values from the `grades` dictionary.
@@ -131,3 +211,17 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # grades -> keys() -> list
 # grades -> values() -> list
 # loop through dictionary
+
+grades = {"Alice": 85, "Bob": 90, "Charlie": 78}
+
+keys = grades.keys()
+
+print(keys)
+
+values = grades.values()
+
+print(values)
+
+items = grades.items()
+
+print(items)
