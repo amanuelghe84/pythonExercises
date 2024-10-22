@@ -104,13 +104,25 @@ print(bob_grade)
 # for value in values:
 #     print(value)
 
+keys = grades.keys()
+
+values = grades.values()
+
+for value in values:
+
+    print(value)
 
 
 # for key, value in zip(keys, values):
 
+# for key, value in zip(keys, values):
+
+    # print(key, value)
+
 # for key, value in grades.items():
 
 #     print(f"{key}: {value}")
+
 
 
     
@@ -162,13 +174,38 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 print(numbers)
 
-even_numbers = {2, 4, 6, 8, 10}
+
+even_numbers = set()
+
+for number in numbers:
+
+    if number % 2 == 0:
+
+        even_numbers.add(number)
 
 print(even_numbers)
 
-my_dict = (2**2, 4**2, 6**2, 8**2, 10**2)
 
-print(my_dict)
+even_numbers_dict = {}
+
+for number in numbers:
+
+    if number % 2 == 0:
+
+        even_numbers_dict[number] = number ** 2
+
+print(even_numbers_dict)        
+
+
+
+# even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+
+
+
+# squared = list(map(lambda x: x**2, numbers))
+
+
+
 
 
 
@@ -187,8 +224,6 @@ fruits = ["apple", "orange", "grape"]
 fruits = set(fruits)
 
 print(fruits)
-
-even_numbers = {2, 4, 6, 8, 10}
 
 even_numbers = tuple(even_numbers)
 
