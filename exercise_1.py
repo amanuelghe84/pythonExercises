@@ -8,19 +8,23 @@
 
 x = 5
 y = 10
-
 z = 5 + 10
+
 print(z)
 
 d = 10 - 5
+
 print(d)
 
 p = 5 * 10
+
 print(p)
 
 q = 10/5
+
 print(q)
 
+print("--------------------------------1---------------------------------------")
 
 # 2. Define a list of fruits containing "apple", "banana", and "cherry".
 #    a) Add "orange" to the list.
@@ -47,6 +51,7 @@ print(first_elem, last_elem)
 
 print(fruits)
 
+print("------------------------------2------------------------------------------")
 
 # 3. Define a set of numbers containing 1, 2, 3, 4, and 5.
 #    a) Add the number 6 to the set.
@@ -65,6 +70,7 @@ numbers_set = set(numbers_set)
 
 print(numbers_set)
 
+print("-----------------------------------3-----------------------------------")
 
 
 # 4. Define a tuple representing coordinates (10.5, 20.7).
@@ -72,12 +78,12 @@ print(numbers_set)
 
 coordinates = (10.5, 20.7)
 
-x_coordinates, y_coordinates = (10.5, 20.7)
+x, y = coordinates
 
-print(x_coordinates)
+print(x)
+print(y)
 
-print(y_coordinates)
-
+print("---------------------------------------4--------------------------------")
 
 # 5. Define a dictionary of student grades, where:
 #    - "Alice" has a grade of 85
@@ -104,9 +110,9 @@ print(bob_grade)
 # for value in values:
 #     print(value)
 
-keys = grades.keys()
+keys = list(grades.keys())
 
-values = grades.values()
+values = list(grades.values())
 
 for value in values:
 
@@ -178,9 +184,7 @@ print(numbers)
 even_numbers = set()
 
 for number in numbers:
-
     if number % 2 == 0:
-
         even_numbers.add(number)
 
 print(even_numbers)
@@ -189,9 +193,7 @@ print(even_numbers)
 even_numbers_dict = {}
 
 for number in numbers:
-
     if number % 2 == 0:
-
         even_numbers_dict[number] = number ** 2
 
 print(even_numbers_dict)        
