@@ -60,13 +60,6 @@ print("----------------------4444-----------------------------------")
 
 my_sentence = ["i am learning the full stack boot camp"]
 
-def word_lengths_in_list(my_sentence):
-    
-    return [len(word) for word in my_sentence[0].split()]
-
-my_sentence = ["i am learning the full stack boot camp"]
-result = word_lengths_in_list(my_sentence)
-print(result) 
 
 print("---------------------5555------------------------------------")
 
@@ -75,13 +68,7 @@ print("---------------------5555------------------------------------")
 
 words = ["amanuel", "yonas", "awet", "robel", "teame"]
 
-def starts_with_vowel(word):
-    return word[0].lower() in 'aeiou'
 
-def filter_words_starting_with_vowel(words):
-    return [word for word in words if starts_with_vowel(word)]
-
-print(filter_words_starting_with_vowel(words))
 
 
 print("---------------------6------------------------------------")
@@ -101,17 +88,8 @@ print("----------------------7777------------------------------------")
 # Challenge 8: Create a function that takes a list of dictionaries and returns a list of the values for a given key.
 # Use list comprehension to extract the values.
 
-dicts = [
-    {"name": "Alice", "age": 25},
-    {"name": "Bob", "age": 30},
-    {"name": "Charlie", "age": 35},
-    {"name": "David", "age": 40 }
-]
 
-def extract_values(dicts, key):
-    return [d[key] for d in dicts if key in d]
 
-print(extract_values(dicts, "name"))
 
 print("----------------------888------------------------------------")
 # Challenge 9: Write a function that accepts a list of words and returns a list of the words with their first letter capitalized.
