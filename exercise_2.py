@@ -3,13 +3,16 @@
 
 # Challenge 1: Define a function that takes a list of numbers and returns a new list containing only the even numbers.
 # The function should use list comprehension.
-numbers = [i for i in range(10) ]
+list_of_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-print(numbers)
+def even_numbers(list_of_numbers):
 
-numbers = [i for i in range(10) if i % 2 == 0]
+ return [i for i in list_of_numbers if i % 2 == 0]
 
-print("even_numbers:", numbers)
+result = even_numbers(list_of_numbers)
+
+print (result)
+
 
 print("-----------------------1111--------------------------------")
 # Challenge 2: Define a function that takes a list of strings and returns a new list with the strings that have more than 5 characters.
@@ -18,10 +21,13 @@ print("-----------------------1111--------------------------------")
 
 fruits = ["banana", "grape", "apple", "watermelon", "orange"]
 
+def long_fruits(fruits):
 
-long_fruits = [fruit for fruit in fruits if len(fruit) > 5]
+ return [fruit for fruit in fruits if len(fruit) > 5]
 
-print(long_fruits)
+result = long_fruits(fruits)
+
+print(result)
 
 
 print("----------------------2222------------------------------------")
@@ -31,24 +37,28 @@ print("----------------------2222------------------------------------")
 
 num_list = [1, 2, 3, 4, 5, 6]
 
-num_list = [i**2 for i in range(5) if i >= 1 ]
+def square_list(num_list):
+      
+ return [i**2 for i in num_list if i >= 1 ]
 
-print(num_list)
+result = square_list(num_list)
+
+print(result)
 
 print("----------------------3333------------------------------------")
 
 # Challenge 4: Write a function that accepts two lists of the same length and returns a list of tuples,
 # where each tuple contains elements from the two lists at the corresponding positions. Use list comprehension.
 
-list1 = [1, 2, 3, 4, 5, 6]
+list_1 = [1, 2, 3, 4, 5, 6]
 
-list2 = ["a", "b", "c", "d", "e", "f"]
+list_2 = ["a", "b", "c", "d", "e", "f"]
 
-def com_lists(list1, list2):
+def combine_lists(list_1, list_2):
 
-    return [(list1[i],list2[i]) for i in range(len(list1))]
+    return [(list_1[i],list_2[i]) for i in range(len(list_1))]
 
-result = com_lists(list1, list2)
+result = combine_lists(list_1, list_2)
 
 print(result)
 
@@ -60,6 +70,13 @@ print("----------------------4444-----------------------------------")
 
 my_sentence = ["i am learning the full stack boot camp"]
 
+def length_of_list(my_sentence):
+
+    return[len(word) for word in my_sentence[0].split()]
+
+result = length_of_list(my_sentence)
+
+print(result)
 
 print("---------------------5555------------------------------------")
 
@@ -68,8 +85,15 @@ print("---------------------5555------------------------------------")
 
 words = ["amanuel", "yonas", "awet", "robel", "teame"]
 
+# helper function
+vowels = 'aeiou' 
 
+def words_without_vowels(words):
 
+ return [word for word in words if  word[0] not in vowels ]
+
+print(words_without_vowels(words))
+      
 
 print("---------------------6------------------------------------")
 
@@ -81,6 +105,7 @@ numbers = [2, 3, 15, 7, 19, 20, 13, 5, 17]
 def list_of_numbers(numbers):
     return [number > 10 for number in numbers]
 result = list_of_numbers(numbers)
+
 print(result)
 
 print("----------------------7777------------------------------------")
@@ -88,6 +113,18 @@ print("----------------------7777------------------------------------")
 # Challenge 8: Create a function that takes a list of dictionaries and returns a list of the values for a given key.
 # Use list comprehension to extract the values.
 
+
+dicts = [
+
+  {"name": "Alice", "age": 25},
+    {"name": "Bob", "age": 30},
+    {"name": "David", "age": 40 }
+]
+
+def extract_values(dicts, key):
+    return [d[key] for d in dicts if key in d]
+
+print(extract_values(dicts, "name"))
 
 
 

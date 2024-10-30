@@ -1,39 +1,58 @@
-import json
-import yaml
+import json  # is built in library no need to install
+import yaml  # is external library you need to install with 'pip install pyyaml'
 import csv
 
+"""
+r = read
+w = write
 
-def starts_with_vowel(word):
-    return word[0].lower() in 'aeiou'
+"""
 
-def filter_words_starting_with_vowel(words):
-    return [word for word in words if starts_with_vowel(word)]
+json_data_to_write = [
 
-print(filter_words_starting_with_vowel(words))
-
-
-
-
-
-dicts = [
-    {"name": "Alice", "age": 25},
-    {"name": "Bob", "age": 30},
-    {"name": "Charlie", "age": 35},
-    {"name": "David", "age": 40 }
+    {'Name': 'John', 'Age': 30, 'City': 'New York'},
+    {'Name': 'Adam', 'Age': 29, 'City': 'Berlin'},
+    {'Name': 'Manual', 'Age': 35, 'City': 'Munich'}
 ]
 
-def extract_values(dicts, key):
-    return [d[key] for d in dicts if key in d]
+"""
+w checks if there is a file already if there is none, it creates one
 
-print(extract_values(dicts, "name"))
+"""
+
+with open('data.json', 'w') as data_json_file:
+    json.dump(json_data_to_write, data_json_file)
+
+print('-----------------------------------------------------')
+
+with open('data.json', 'r') as data_json_file:
+    data = json.load(data_json_file)
+    print(data)
+    print(type(data))
+
+json_data_to_write = [
+
+    {'Name': 'John', 'Age': 30, 'City': 'New York'},
+    {'Name': 'Adam', 'Age': 29, 'City': 'Berlin'},
+    {'Name': 'Manual', 'Age': 35, 'City': 'Munich'},
+    {'Name': 'Josef', 'Age': 40, 'City': 'Zürich'}
+]
+
+
+with open('new_data.json', 'w') as new_data_json_file:
+    json.dump(json_data_to_write, new_data_json_file)
+
+
+print('--------------------------------------------------------')
+
+
+with open("new_data.json", 'r') as new_data_json_file:
+    data = json.load(new_data_json_file)
+    print(data)
+    print(type(data))
 
 
 
 
-def word_lengths_in_list(my_sentence):
-    
-    return [len(word) for word in my_sentence[0].split()]
 
-my_sentence = ["i am learning the full stack boot camp"]
-result = word_lengths_in_list(my_sentence)
-print(result) 
+
