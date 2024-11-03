@@ -12,6 +12,9 @@ list_of_numbers = [5, 10, 15, 20, 25, 30, 35]
 
 x = list_of_numbers
 
+def calculate_number(list_of_numbers):
+    
+
 mean = stats.mean(x)
 median = stats.median(x)
 mode = stats.mode(x)
