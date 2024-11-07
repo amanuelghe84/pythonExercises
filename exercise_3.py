@@ -6,19 +6,6 @@
 #    c) The mode of the numbers.
 #    Use the `statistics` module for these calculations.
 
-import statistics as stats
-
-list_of_numbers = [5, 10, 15, 20, 25, 30, 35]
-
-x = list_of_numbers
-
-def calculate_number(list_of_numbers):
-    
-
-mean = stats.mean(x)
-median = stats.median(x)
-mode = stats.mode(x)
-
 
 # 2. Create a class `Rectangle` that has attributes for `width` and `height`.
 #    a) Define a method to calculate the area of the rectangle.
